@@ -9,32 +9,24 @@ import Navbar from './Navbar';
 import {Component} from 'react';
 import details from './details';
 import Modal from './Modal';
-import Login from './Login';
+import Register from './user/Register';
+import Login from './user/Login'; 
+import Profile from './user/Profile';
 class App extends Component{
-    constructor(props){
-        super(props);
-        this.state={ apiResponse:""};
-    }
-    callApi(){
-        fetch("http://localhost:9000/testApi")
-        .then(res=>res.text())
-        .then(res=>this.setState({apiResponse:res}));
-    }
-    componentDidMount(){
-        this.callApi();
-    }
     render(){
         return(
             <React.Fragment>
                 <Navbar/>
-                <p className="Api-intro">{this.state.apiResponse}</p>
                 
                 <Switch>
+                <Route path = "/profile" component={Profile}/>
                 <Route path="/details" component = {details}/>
                 <Route path = "/Product" component={Product}/>
                 <Route exact path="/" component={ProductList}/>
                 <Route path="/Cart" component={Cart}/> 
-                <Route path = "/Login" component ={Login}/>        
+                <Route path = "/Register" component ={Register}/>   
+                <Route path = "/Login" component = {Login}/> 
+                     
                 </Switch>
                  <Modal/>
             </React.Fragment>

@@ -31,7 +31,9 @@ export default function CartTotal({value}) {
                   <strong>$ {cartTotal}</strong>
                </h5>
                </div>
+               
             </div>
+            <button className ="btn btn-warning btn-sm" type = "button" >Thanh toán</button>
          </div>
       </React.Fragment>
    );

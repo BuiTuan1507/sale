@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import { GiShop } from "react-icons/gi";
-import {Login} from "./Login";
+import {Register} from "./user/Register";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {IconContext} from "react-icons";
 import {FaShoppingBag} from "react-icons/fa";
@@ -20,15 +20,20 @@ export default class Navbar extends Component {
                            <li style={{fontSize:"2em"}}>Products</li></Link>
                    </li>
                </ul>
-               <Link to ='/Cart' className = "ml-auto" style = {{position:"absolute", right:"100px"}}>
+               <Link to ='/Cart' className = "ml-auto" style = {{position:"absolute", right:"230px"}}>
                    <button>
                        <span className="nr-2">
                        <FaShoppingBag/> 
                     </span>My cart</button>
                </Link>
-               <Link to = '/Login' className = "ml-auto">
+               <Link to = './Login'style = {{position:"absolute", right:"120px"}} >
                    <button>
-                       <span className = "nr-2"> <IoMdLogIn/>Login</span>
+                   <span className = "nr-2"> <IoMdLogIn/>Login</span>
+                   </button>
+               </Link>
+               <Link to = '/Register' className = "ml-auto">
+                   <button>
+                       <span className = "nr-2"> <IoMdLogIn/>Register</span>
                    </button>
                
                </Link>

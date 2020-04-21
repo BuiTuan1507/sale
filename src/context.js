@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import{storeProducts, detailProduct} from "./data";
+import{storeProducts, detailProduct, userProfile} from "./data";
 const ProductContext = React.createContext(); 
 class ProductProvider extends Component {
     state = {
@@ -10,8 +10,8 @@ class ProductProvider extends Component {
         modalProduct:detailProduct,
         carSubTotal:0,
         carTax:0,
-        cartTotal:0
-
+        cartTotal:0,
+        userProfile:userProfile
     }
     componentDidMount(){
         this.setProducts();

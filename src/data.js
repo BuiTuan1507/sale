@@ -145,3 +145,11 @@ export const detailProduct = {
     total:0
 }
 ;
+export const userProfile = {
+    id : 1,
+    img: "img/imm.jpg",
+    name : "Meo Meo",
+    age: 1,
+    money : 5000
+   
+}
