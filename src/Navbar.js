@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {IconContext} from "react-icons";
 import {FaShoppingBag} from "react-icons/fa";
 import {IoMdLogIn} from "react-icons/io";
+
 export default class Navbar extends Component {
     render() {
         return (
@@ -17,9 +18,10 @@ export default class Navbar extends Component {
                <ul className ="navbar-nav align-items-center">
                    <li className="nav-item ml-5">
                        <Link to = "/" className="nav-link">
-                           <li style={{fontSize:"2em"}}>Products</li></Link>
+                           <li style={{fontSize:"2em", fontFamily: "Permanent Marker",color:"orange"}}>SachViet.com</li></Link>
                    </li>
                </ul>
+
                <Link to ='/Cart' className = "ml-auto" style = {{position:"absolute", right:"210px"}}>
                    <button>
                        <span className="nr-2">
