@@ -12,6 +12,7 @@ import Modal from './Modal';
 import Register from './user/Register';
 import Login from './user/Login'; 
 import Profile from './user/Profile';
+import Footer from './Footer'
 class App extends Component{
     render(){
         return(
@@ -29,6 +30,7 @@ class App extends Component{
                      
                 </Switch>
                  <Modal/>
+                 <Footer/>
             </React.Fragment>
         )
     }
