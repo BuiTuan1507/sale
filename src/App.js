@@ -12,18 +12,24 @@ import Modal from './Modal';
 import Register from './user/Register';
 import Login from './user/Login'; 
 import Profile from './user/Profile';
-import Footer from './Footer'
+import Footer from './Footer';
+import Hover from './Hover'
+
+
 class App extends Component{
+     
     render(){
         return(
             <React.Fragment>
                 <Navbar/>
-                
+                <br></br>
                 <Switch>
+                  
+                <Route  exact path = "/" component ={Hover}/>
                 <Route path = "/profile" component={Profile}/>
                 <Route path="/details" component = {details}/>
                 <Route path = "/Product" component={Product}/>
-                <Route exact path="/" component={ProductList}/>
+                <Route path="/ProductList" component={ProductList}/>
                 <Route path="/Cart" component={Cart}/> 
                 <Route path = "/Register" component ={Register}/>   
                 <Route path = "/Login" component = {Login}/> 
