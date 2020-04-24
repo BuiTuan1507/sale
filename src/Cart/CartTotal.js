@@ -34,7 +34,7 @@ export default function CartTotal({value}) {
                
             </div>
             <Link to ="/Thanhtoan">
-            <button className ="btn btn-warning btn-sm" type = "button" >Thanh toán</button>
+            <button className ="btn btn-warning btn-sm" type = "button" onClick = {()=>clearCart()} >Thanh toán</button>
             </Link>
            
          </div>

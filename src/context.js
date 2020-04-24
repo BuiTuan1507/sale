@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { storeProducts, detailProduct, userProfile, vanhocProduct,kinangProduct } from "./data";
+import { storeProducts, detailProduct, userProfile, vanhocProduct,kinangProduct,thieunhiProduct,dungcuProduct,banchayProduct } from "./data";
 const ProductContext = React.createContext();
 class ProductProvider extends Component {
     state = {
@@ -57,6 +57,36 @@ class ProductProvider extends Component {
                
                 
                 tempProducts[i] = kinangProduct[i];
+            };
+            this.setState(() => {
+                return { products: tempProducts };
+            })
+        }
+        if (k == 4) {
+            for (let i = d - 7; i <= d; i++) {
+               
+                
+                tempProducts[i] = thieunhiProduct[i];
+            };
+            this.setState(() => {
+                return { products: tempProducts };
+            })
+        }
+        if (k == 5) {
+            for (let i = d - 7; i <= d; i++) {
+               
+                
+                tempProducts[i] = banchayProduct[i];
+            };
+            this.setState(() => {
+                return { products: tempProducts };
+            })
+        }
+        if (k == 6) {
+            for (let i = d - 7; i <= d; i++) {
+               
+                
+                tempProducts[i] = dungcuProduct[i];
             };
             this.setState(() => {
                 return { products: tempProducts };

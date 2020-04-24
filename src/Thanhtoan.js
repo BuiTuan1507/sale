@@ -13,8 +13,8 @@ export default class Thanhtoan extends Component {
                               className="col-8 mx-auto col-md-6 col-lg-4 p-5 text-center text-capitalize"
                               style = {{background:"white"}}
                            >
-                             
-                              Ban da thanh toan thanh cong
+                             <p style = {{fontSize:"30px", color:"orange"}}>Ban da thanh toan thanh cong</p>
+                              
                               <Link to ="/">
                                  <button>Continuing shopping</button>
                               </Link>

@@ -15,26 +15,41 @@ export default class Hover extends Component {
                      <div className="row">
 
                         <div className="col-lg-3">
-                           <p style = {{fontSize:"23px",color:"orange", fontFamily:"Pacifico"}}>Danh muc san pham</p>
+                           <p style={{ fontSize: "24px", color: "orange", fontFamily: "Pacifico" }}>Danh mục sản phẩm</p>
                            <hr></hr>
                            <Link to="/ProductList" >
-                              <p onClick={() => {
-                                 value.display(1,7)
-                              }}>Sach tieu thuyet</p>
+                              <p style ={{fontFamily:"Lato", fontSize:"20px",}} onClick={() => {
+                                 value.display(1, 7)
+                              }}>Tiểu thuyết</p>
 
                            </Link>
-                           <br></br>
+                           
                            <Link to="/ProductList">
-                              <p onClick={() => {
-                                 value.display(2,7)
-                              }}>Sach tieu thuyet</p>
+                              <p style ={{fontFamily:"Lato", fontSize:"20px",}} onClick={() => {
+                                 value.display(2, 7)
+                              }}>Văn học</p>
                            </Link>
-                           <br></br>
+                           
                            <Link to="/ProductList">
-                           <p onClick={() => {
-                                 value.display(3,7)
-                              }}>Sach ki nang song</p>
-            </Link>
+                              <p style ={{fontFamily:"Lato", fontSize:"20px",}} onClick={() => {
+                                 value.display(3, 7)
+                              }}>Tâm lí - Kĩ năng sống</p>
+                           </Link>
+                           <Link to = "/ProductList">
+                           <p style ={{fontFamily:"Lato", fontSize:"20px",}} onClick={() => {
+                                 value.display(4, 7)
+                              }}>Sách thiếu nhi</p>
+                           </Link>
+                           <Link to = "/ProductList">
+                           <p style ={{fontFamily:"Lato", fontSize:"20px",}} onClick={() => {
+                                 value.display(5, 7)
+                              }}>Sách bán chạy</p>
+                           </Link>
+                           <Link to = "/ProductList">
+                           <p style ={{fontFamily:"Lato", fontSize:"20px",}} onClick={() => {
+                                 value.display(6, 7)
+                              }}>Dụng cụ học sinh</p>
+                           </Link>
                         </div>
                         <div className="col-lg-9" >
                            <img src="img/nen.jpg" alt="background" />
@@ -44,9 +59,9 @@ export default class Hover extends Component {
 
                   </div>
                )
-                           }}
+            }}
 
-            
+
          </ProductConsumer>
 
       )
