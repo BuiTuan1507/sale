@@ -33,7 +33,10 @@ export default function CartTotal({value}) {
                </div>
                
             </div>
+            <Link to ="/Thanhtoan">
             <button className ="btn btn-warning btn-sm" type = "button" >Thanh toán</button>
+            </Link>
+           
          </div>
       </React.Fragment>
    );

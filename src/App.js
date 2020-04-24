@@ -14,7 +14,7 @@ import Login from './user/Login';
 import Profile from './user/Profile';
 import Footer from './Footer';
 import Hover from './Hover'
-
+import Thanhtoan from './Thanhtoan';
 
 class App extends Component{
      
@@ -33,9 +33,10 @@ class App extends Component{
                 <Route path="/Cart" component={Cart}/> 
                 <Route path = "/Register" component ={Register}/>   
                 <Route path = "/Login" component = {Login}/> 
-                     
+                     <Route path = "/Thanhtoan" component={Thanhtoan}/>
                 </Switch>
                  <Modal/>
+               
                  <Footer/>
             </React.Fragment>
         )

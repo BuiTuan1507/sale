@@ -12,7 +12,8 @@ class ProductProvider extends Component {
         carSubTotal: 0,
         carTax: 0,
         cartTotal: 0,
-        userProfile: userProfile
+        userProfile: userProfile,
+        thOpen: false
     }
     componentDidMount() {
         //this.setProducts();
@@ -104,6 +105,7 @@ class ProductProvider extends Component {
             return { modalOpen: false }
         })
     };
+
     increment = (id) => {
         let tempCart = [...this.state.cart];
         const selectedProduct = tempCart.find(item => item.id === id);
@@ -161,7 +163,7 @@ class ProductProvider extends Component {
             return { cart: [] };
         },
             () => {
-                this.setProducts();
+                this.display();
                 this.addTotals();
             })
     }
@@ -193,6 +195,7 @@ class ProductProvider extends Component {
                     decrement: this.decrement,
                     removeItem: this.removeItem,
                     clearCart: this.clearCart
+                   
                 }}
             >
                 {this.props.children}
