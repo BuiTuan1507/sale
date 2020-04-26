@@ -33,7 +33,7 @@ class ProductProvider extends Component {
     //  }
     display = (k,d) => {
         let tempProducts = [];
-        if (k == 1) {
+        if (k === 1) {
             for (let i = d - 7; i <= d; i++) {
                
                 
@@ -43,7 +43,7 @@ class ProductProvider extends Component {
                 return { products: tempProducts };
             })
         }
-        if (k == 2) {
+        if (k === 2) {
             for (let i = d - 8; i <= d; i++) {
 
                 tempProducts[i] = vanhocProduct[i];
@@ -52,7 +52,7 @@ class ProductProvider extends Component {
                 return { products: tempProducts };
             })
         }
-        if (k == 3) {
+        if (k === 3) {
             for (let i = d - 7; i <= d; i++) {
                
                 
@@ -62,7 +62,7 @@ class ProductProvider extends Component {
                 return { products: tempProducts };
             })
         }
-        if (k == 4) {
+        if (k === 4) {
             for (let i = d - 7; i <= d; i++) {
                
                 
@@ -72,7 +72,7 @@ class ProductProvider extends Component {
                 return { products: tempProducts };
             })
         }
-        if (k == 5) {
+        if (k === 5) {
             for (let i = d - 7; i <= d; i++) {
                
                 
@@ -82,7 +82,7 @@ class ProductProvider extends Component {
                 return { products: tempProducts };
             })
         }
-        if (k == 6) {
+        if (k === 6) {
             for (let i = d - 7; i <= d; i++) {
                
                 

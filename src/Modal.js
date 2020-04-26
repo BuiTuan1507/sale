@@ -20,17 +20,17 @@ export default class Modal extends Component {
                                  className="col-8 mx-auto col-md-6 col-lg-4 p-5 text-center text-capitalize"
                                  style = {{background:"white"}}
                               >
-                                 <h5>item added to cart</h5>
+                                 <h5>Sản phẩm</h5>
                                  <img src={img} style = {{height:"350px",width:"230px"}} className="img-fluid  " alt="" />
                                  <h5>{title}</h5>
-                                 <h5 className="text-muted">price : ${price}</h5>
+                                 <h5 className="text-muted">giá : {price}đ</h5>
                                  <Link to="/ProductList">
                                     <button
                                        onClick={() => {
                                           closeModal();
                                        }}
                                     >
-                                       Continue Shopping
+                              Tiếp tục mua sắm
                           </button>
                                  </Link>
                                  <Link to="/cart">
@@ -40,7 +40,7 @@ export default class Modal extends Component {
                                           closeModal();
                                        }}
                                     >
-                                       Go To Cart
+                                       Tới giỏ hàng
                           </button>
                                  </Link>
                               </div>

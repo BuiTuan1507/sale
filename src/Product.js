@@ -22,7 +22,7 @@ export default class Product extends Component {
                             onClick={()=>{value.addToCart(id);
                             value.openModal(id);
                             }}>
-                            {inCart?(<p disabled>{" "}in Cart</p>):(<FiShoppingCart/> )}
+                            {inCart?(<p disabled>{" "}đã chọn</p>):(<FiShoppingCart/> )}
                             </button>
                            </div>
                        )}
@@ -33,8 +33,9 @@ export default class Product extends Component {
                             
                             <div className="text-blue font-italic mb-0">
                             
-                                <span className = "mr-1">$</span>
+                                
                                 {price}
+                                <span className = "mr-1">đ</span>
                             </div>
                             <div>
                                 <img src = {rating1} alt =""/>

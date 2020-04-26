@@ -20,10 +20,24 @@ export const login = user => {
       password: user.password
     })
     .then(response => {
-      localStorage.setItem('usertoken', JSON.stringify(response.data))
+      sessionStorage.setItem('usertoken', JSON.stringify(response.data))
       return response.data
     })
     .catch(err => {
       console.log(err)
     })
+}
+export const thanhtoan = user => {
+  return axios
+   .post('http://localhost:9000/Users/thanhtoan',{
+     email: user.email,
+     money: user.money
+   })
+   .then(response =>{
+     sessionStorage.setItem('usertoken1',JSON.stringify(response.data))
+     return response.data
+   })
+   .catch(err=>{
+     console.log(err)
+   })
 }

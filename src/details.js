@@ -32,24 +32,24 @@ export default class details extends Component {
                 </div>
                 {/* prdoduct info */}
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                  <h1>model : {title}</h1>
+                  <h1>Sản phẩm {title}</h1>
                   <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-                    made by : <span className="text-uppercase">{company}</span>
+                    Tác giả <span className="text-uppercase">{company}</span>
                   </h4>
                   <h4 className="text-blue">
                     <strong>
-                      price : <span>$</span>
+                      giá : <span>đ</span>
                       {price}
                     </strong>
                   </h4>
                   <p className="text-capitalize font-weight-bold mt-3 mb-0">
-                    some info about product :
+                    Giới thiệu:
                   </p>
                   <p className="text-muted lead">{info}</p>
                   {/* buttons */}
                   <div>
                     <Link to="/">
-                      <button>back to products</button>
+                      <button>trở lại trang mua hàng</button>
                     </Link>
                     <button
                       cart
