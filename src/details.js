@@ -59,7 +59,7 @@ export default class details extends Component {
                         value.openModal(id);
                       }}
                     >
-                      {inCart ? "in cart" : "add to cart"}
+                      {inCart ? "Trong giỏ hàng" : "Thêm vào giỏ hàng"}
                     </button>
                   </div>
                 </div>

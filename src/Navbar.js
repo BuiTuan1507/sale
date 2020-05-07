@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import { GiBookmark } from "react-icons/gi";
-import { Register } from "./user/Register";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { IconContext } from "react-icons";
 import { FaShoppingBag } from "react-icons/fa";
 import { IoMdLogIn } from "react-icons/io";
 import { FaRegistered } from 'react-icons/fa'
+import { FaHome } from 'react-icons/fa'
 export default class Navbar extends Component {
     render() {
         return (
             <React.Fragment>
                 <nav className="navbar navbar-expand-sm bg-primary navbar-dark px-4x-5">
                     <Link to="/" >
-                        <IconContext.Provider value={{ color: "White", size: "4em" }} >< GiBookmark /></IconContext.Provider>
+                        <IconContext.Provider value={{ color: "White", size: "4em" }} >< FaHome /></IconContext.Provider>
 
                     </Link>
                     <ul className="navbar-nav align-items-center">
@@ -22,7 +22,11 @@ export default class Navbar extends Component {
                                 <li style={{ fontSize: "2em", fontFamily: "Permanent Marker", color: "orange" }}>SachViet.com</li></Link>
                         </li>
                     </ul>
-                    <p style={{ position: "absolute", right: "700px", fontFamily:"Lato", fontSize:"22px", color:"white" }}>Xin Chào Bạn  {sessionStorage.getItem("last_name")}</p>
+
+                    <Link to="/profile">
+                        <p  style={{ position: "absolute", right: "700px", fontFamily: "Lato", fontSize: "22px", color: "white" }}>Xin Chào Bạn  {sessionStorage.getItem("last_name")}</p>
+                    </Link>
+                    
                     <p style={{ position: "absolute", right: "340px" }}>Hotline: 1900 1503</p>
                     <Link to='/Cart' className="ml-auto" style={{ position: "absolute", right: "240px" }}>
                         <button type="button" class="btn btn-light btn-sm">

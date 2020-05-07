@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import jwt_decode from 'jwt-decode'
-
+import NumberFormat from 'react-number-format'
 class Profile extends Component {
   constructor() {
     super()
@@ -50,8 +50,11 @@ class Profile extends Component {
                 <td>{this.state.email}</td>
               </tr>
               <tr>
-                <td>So du tai khoan</td>
-    <td>{this.state.money}</td>
+                <td>Số dư tài khoản</td>
+              
+                <td>
+                        <p> <NumberFormat value={this.state.money} displayType={'text'} thousandSeparator={true} suffix={'d'}  /></p>
+                     </td>
               </tr>
             </tbody>
           </table>

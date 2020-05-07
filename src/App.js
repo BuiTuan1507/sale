@@ -15,7 +15,7 @@ import Profile from './user/Profile';
 import Footer from './Footer';
 import Hover from './Hover'
 import Thanhtoan from './Thanhtoan';
-
+import bank from './user/bank';
 class App extends Component{
      
     render(){
@@ -24,7 +24,7 @@ class App extends Component{
                 <Navbar/>
                 <br></br>
                 <Switch>
-                  
+                <Route path = "/bank" component = {bank}/>
                 <Route  exact path = "/" component ={Hover}/>
                 <Route path = "/profile" component={Profile}/>
                 <Route path="/details" component = {details}/>
