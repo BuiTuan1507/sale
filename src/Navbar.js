@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-
+import CustomizedMenus from './UI/FadeMenu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { IconContext } from "react-icons";
-import { FaShoppingBag } from "react-icons/fa";
-import { IoMdLogIn } from "react-icons/io";
-import { FaRegistered } from 'react-icons/fa'
+
 import { FaHome } from 'react-icons/fa'
 export default class Navbar extends Component {
     render() {
@@ -24,28 +22,14 @@ export default class Navbar extends Component {
                     </ul>
 
                     <Link to="/profile">
-                        <p  style={{ position: "absolute", right: "700px", fontFamily: "Lato", fontSize: "22px", color: "white" }}>Xin Chào Bạn  {sessionStorage.getItem("last_name")}</p>
+                        <p  style={{ position: "absolute", right: "600px", fontFamily: "Lato", fontSize: "22px", color: "white",top:"25px"  }}>Xin Chào Bạn  {sessionStorage.getItem("last_name")}</p>
                     </Link>
                     
-                    <p style={{ position: "absolute", right: "340px" }}>Hotline: 1900 1503</p>
-                    <Link to='/Cart' className="ml-auto" style={{ position: "absolute", right: "240px" }}>
-                        <button type="button" class="btn btn-light btn-sm">
-                            <span className="nr-2">
-                                <FaShoppingBag />
-                            </span>Giỏ hàng</button>
-                    </Link>
-                    <Link to='./Login' style={{ position: "absolute", right: "120px" }} >
-                        <button type="button" class="btn btn-light btn-sm" >
-                            <span className="nr-2"> <IoMdLogIn />Đăng nhập</span>
-                        </button>
-                    </Link>
-                    <Link to='/Register' className="ml-auto">
-                        <button type="button" class="btn btn-light btn-sm" >
-                            <span className="nr-2"> <FaRegistered />Đăng ký</span>
-                        </button>
-
-                    </Link>
-
+                    <p style={{ position: "absolute", right: "150px" }}>Hotline: 1900 1503</p>
+                    <div style = {{position: "absolute", right: "30px"}} >
+                    <CustomizedMenus />
+                    </div>
+                    
 
                 </nav>
             </React.Fragment>

@@ -52,7 +52,7 @@ export default class Hover extends Component {
                            </Link>
                         </div>
                         <div className="col-lg-9" >
-                           <img src="img/nen.jpg" alt="background" />
+                           <img src="img/nen.jpg" style={{maxWidth:"100%",height:"auto"}} alt="background" />
                         </div>
 
                      </div>
