@@ -809,4 +809,4 @@ export const detailProduct = {
 export const userProfile = {
     d : 1,
     k :1
-}
+};

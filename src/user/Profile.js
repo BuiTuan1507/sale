@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import jwt_decode from 'jwt-decode'
+
 import NumberFormat from 'react-number-format'
 class Profile extends Component {
   constructor() {

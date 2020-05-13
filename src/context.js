@@ -4,7 +4,7 @@ const ProductContext = React.createContext();
 class ProductProvider extends Component {
     state = {
         products: [],
-
+        search:[],
         detailProduct: detailProduct,
         cart: [],
         modalOpen: false,
@@ -210,6 +210,9 @@ class ProductProvider extends Component {
                 cartTotal: total
             }
         })
+    }
+    serachBox = (a)=>{
+        
     }
     render() {
         return (
