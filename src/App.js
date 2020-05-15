@@ -16,6 +16,7 @@ import Footer from './Footer';
 import Hover from './Hover'
 import Thanhtoan from './Thanhtoan';
 import bank from './user/bank';
+
 class App extends Component{
      
     render(){
@@ -36,7 +37,7 @@ class App extends Component{
                      <Route path = "/Thanhtoan" component={Thanhtoan}/>
                 </Switch>
                  <Modal/>
-               
+                
                  <Footer/>
             </React.Fragment>
         )

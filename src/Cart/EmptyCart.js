@@ -6,7 +6,7 @@ export default class EmptyCart extends Component {
          <div className = "container">
             <div style ={{boxShadow: "0px 0px 2px rgba(0,0,0,0.1)",padding:"20px",backgroundColor:"#fff"}}>
           <div className="page-title" style = {{textAlign:"center", fontSize:"25px", fontFamily:"Permanent Marker"}}>Giỏ hàng trống</div>
-          <div style = {{height:"300px", width:"320px"}}>
+          <div style = {{height:"330px", width:"350px"}}>
              <Link to  = "/"> Click vào đây để quay lại trang chủ</Link>
          </div>
        </div>
