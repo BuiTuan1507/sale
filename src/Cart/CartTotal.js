@@ -77,6 +77,9 @@ export default function CartTotal({ value }) {
             </div>
             <checkMoney isCheck={check} />
             <Th  />
+            <Link to  = "/Thanhtoan">
+               
+            </Link>
             <Link to = '/'>
             <button className = "btn btn-primary btn-sm" type = "button" onClick={() => clearCart()}>Tiếp tục mua sắm</button>
 

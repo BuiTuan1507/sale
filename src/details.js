@@ -19,20 +19,20 @@ export default class details extends Component {
 
           return (
             <div className="container py-5">
-              {/* title */}
+            
               <div className="row">
                 <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
                   <h1>{title}</h1>
                 </div>
               </div>
-              {/* end of title */}
+              
               <div className="row">
                 <div className="col-10 mx-auto col-md-6 my-3">
                   <img src={img} className="img-fluid" alt="" />
                 </div>
-                {/* prdoduct info */}
+                
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
-                  <h1>Sản phẩm {title}</h1>
+                  <h1>Sản phẩm: {title}</h1>
                   <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
                     Tác giả <span className="text-uppercase">{company}</span>
                   </h4>
@@ -46,7 +46,7 @@ export default class details extends Component {
                     Giới thiệu:
                   </p>
                   <p className="text-muted lead">{info}</p>
-                  {/* buttons */}
+               
                   <div>
                     <Link to="/">
                       <button>trở lại trang mua hàng</button>

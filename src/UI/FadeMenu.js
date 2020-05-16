@@ -88,7 +88,7 @@ export default function CustomizedMenus() {
             <VpnKeyIcon fontSize="small" />
           </ListItemIcon>
          
-          <Link to = "/Login">
+          <Link to = "/Register">
           <ListItemText primary="Đăng ký" />
           </Link>
           
@@ -97,7 +97,7 @@ export default function CustomizedMenus() {
         <ListItemIcon>
             <LockOpenIcon fontSize="small" />
           </ListItemIcon>
-          <Link to ="/Register">
+          <Link to ="/Login">
           
           <ListItemText primary="Đăng nhập" />
           </Link>
