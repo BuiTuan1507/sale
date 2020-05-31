@@ -17,9 +17,11 @@ export default class
                      return (
                         <React.Fragment>
                            <Title/>
+                           <br></br>
                         <CartColumns/>
                         <CartList value = {value}/>
                         <CartTotal value = {value}/>
+                        <div style={{width:"250px", height:"300px"}}></div>
                         </React.Fragment>
                         
                      );
