@@ -12,7 +12,7 @@ import Modal from './Modal';
 import Register from './user/Register';
 import Login from './user/Login'; 
 import Profile from './user/Profile';
-import Footer from './Footer';
+import Footer from './UI/Footer';
 import Hover from './Hover'
 import Thanhtoan from './Thanhtoan';
 import bank from './user/bank';
@@ -23,7 +23,6 @@ class App extends Component{
         return(
             <React.Fragment>
                 <Navbar/>
-                <br></br>
                 <Switch>
                 <Route path = "/bank" component = {bank}/>
                 <Route  exact path = "/" component ={Hover}/>

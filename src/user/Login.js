@@ -1,12 +1,29 @@
 import React, { Component } from 'react'
 import { login } from './UserFunctions'
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import { Link } from 'react-router-dom'
+import Grid from '@material-ui/core/Grid';
+
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+
+import Container from '@material-ui/core/Container';
+
+
+
 class Login extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props);
     this.state = {
       email: '',
       password: '',
       errors: {}
+
     }
 
     this.onChange = this.onChange.bind(this)
@@ -18,12 +35,12 @@ class Login extends Component {
   }
   onSubmit(e) {
     e.preventDefault();
-   
+
     const user = {
       email: this.state.email,
       password: this.state.password
     }
-    
+
     login(user).then(res => {
       if (res) {
         this.props.history.push(`/profile`)
@@ -31,45 +48,88 @@ class Login extends Component {
     })
   }
 
+
   render() {
+
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6 mt-5 mx-auto">
-            <form noValidate onSubmit={this.onSubmit}>
-              <h1 className="h3 mb-3 font-weight-normal">Nhập thông tin</h1>
-              <div className="form-group">
-                <label htmlFor="email">Địa chỉ email</label>
-                <input
-                  type="email"
-                  className="form-control"
+      <div style={{
+        backgroundImage: `url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(11).jpg")`, backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover", width: "100%", height: "100%"
+      }} >
+        <div>
+          
+         
+          <Container component="main" maxWidth="xs" >
+            <CssBaseline />
+            <div style={{ marginTop: "5px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <Avatar style={{ margin: "1px", backgroundColor: "red" }}
+
+              >
+                <LockOutlinedIcon />
+              </Avatar>
+              <Typography component="h1" variant="h5">
+                Đăng nhập
+       </Typography>
+              <form style={{ width: '100%', marginTop: "2px" }} noValidate onSubmit={this.onSubmit}>
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Địa chỉ email"
                   name="email"
-                  placeholder="Nhập email của bạn"
+                  autoComplete="email"
+                  autoFocus
                   value={this.state.email}
                   onChange={this.onChange}
                 />
-              </div>
-              <div className="form-group">
-                <label htmlFor="password">Mật Khẩu</label>
-                <input
-                  type="password"
-                  className="form-control"
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
                   name="password"
-                  placeholder="Mật khẩu"
+                  label="Mật khẩu"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
                   value={this.state.password}
-                  onChange={this.onChange}
+                  onChange = {this.onChange}
                 />
-              </div>
-              <button
-                type="submit"
-                className="btn btn-lg btn-primary btn-block"
-              >
-              Đăng Nhập
-              </button>
-            </form>
+                <FormControlLabel
+                  control={<Checkbox value="remember" color="primary" />}
+                  label="Nhớ đăng nhập"
+                />
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="primary"
+                  style={{ margin: "3px 0 2px" }}
+                >
+                  Đăng nhập
+         </Button>
+                <Grid container>
+
+                  <Grid item>
+                    <Link to="/Register" variant="body2">
+                      {"Bạn đã có tài khoản? Đăng ký"}
+                    </Link>
+                  </Grid>
+                </Grid>
+              </form>
+            </div>
+
+          </Container>
+          <div style={{height:"225px"}}>
+
           </div>
         </div>
+
       </div>
+
     )
   }
 }

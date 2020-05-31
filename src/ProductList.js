@@ -14,7 +14,7 @@ export default class ProductList extends Component {
                
                 <ProductWrapper className="py-5">
                     <div className="container">
-                        <Title name="Danh sách" title="san pham" />
+                        <div style = {{fontSize:"32px", fontFamily:"Pacifico", color: "Black", textAlign:"center"}}>Danh sach san pham </div>
                         <div className="row">
                             <ProductConsumer>
                                 {value => {
