@@ -789,7 +789,7 @@ export const thieunhiProduct = [
         }
     
 ]
-export const detailProduct = {
+export const detailProduct = [{
     id: 1,
     title: "Con chó nhỏ và giỏ hoa hồng",
     img: "img/i-1.png",
@@ -804,9 +804,142 @@ export const detailProduct = {
     inCart: false,
     count: 0,
     total:0
-}
+}]
 ;
 export const userProfile = {
     d : 1,
     k :1
 };
+export const searchSP=[{
+    id: 1,
+    title: "Tony buoi sang",
+    img: "img/ThieuNhi/i-1.jpg",
+    price:20,
+    company:"aas",
+    info:"kkk",
+    rating1:"img/star-x.png",
+    rating2:"img/star-x.png",
+    rating3:"img/star-x.png",
+    rating4:"img/star-y.png",
+    rating5:"img/star-y.png",
+    inCart:false,
+    count:0,
+    total:0
+},
+
+    {
+        id: 2,
+        title: "Tony buoi sang",
+        img: "img/ThieuNhi/i-2.jpg",
+        price:20,
+        company:"aas",
+        info:"kkk",
+        rating1:"img/star-x.png",
+        rating2:"img/star-x.png",
+        rating3:"img/star-x.png",
+        rating4:"img/star-y.png",
+        rating5:"img/star-y.png",
+        inCart:false,
+        count:0,
+        total:0
+    },
+
+    {
+        id: 3,
+        title: "Tony buoi sang",
+        img: "img/ThieuNhi/i-3.jpg",
+        price:20,
+        company:"aas",
+        info:"kkk",
+        rating1:"img/star-x.png",
+        rating2:"img/star-x.png",
+        rating3:"img/star-x.png",
+        rating4:"img/star-y.png",
+        rating5:"img/star-y.png",
+        inCart:false,
+        count:0,
+        total:0
+    },
+
+    {
+        id: 4,
+        title: "Tony buoi sang",
+        img: "img/ThieuNhi/i-4.jpg",
+        price:20,
+        company:"aas",
+        info:"kkk",
+        rating1:"img/star-x.png",
+        rating2:"img/star-x.png",
+        rating3:"img/star-x.png",
+        rating4:"img/star-y.png",
+        rating5:"img/star-y.png",
+        inCart:false,
+        count:0,
+        total:0
+    },
+    {
+        id: 5,
+        title: "Tony buoi sang",
+        img: "img/ThieuNhi/i-5.jpg",
+        price:20,
+        company:"aas",
+        info:"kkk",
+        rating1:"img/star-x.png",
+        rating2:"img/star-x.png",
+        rating3:"img/star-x.png",
+        rating4:"img/star-y.png",
+        rating5:"img/star-y.png",
+        inCart:false,
+        count:0,
+        total:0
+    },
+    {
+        id: 6,
+        title: "Tony buoi sang",
+        img: "img/ThieuNhi/i-6.jpg",
+        price:20,
+        company:"aas",
+        info:"kkk",
+        rating1:"img/star-x.png",
+        rating2:"img/star-x.png",
+        rating3:"img/star-x.png",
+        rating4:"img/star-y.png",
+        rating5:"img/star-y.png",
+        inCart:false,
+        count:0,
+        total:0
+    },
+    {
+        id: 7,
+        title: "Tony buoi sang",
+        img: "img/ThieuNhi/i-7.jpg",
+        price:20,
+        company:"aas",
+        info:"kkk",
+        rating1:"img/star-x.png",
+        rating2:"img/star-x.png",
+        rating3:"img/star-x.png",
+        rating4:"img/star-y.png",
+        rating5:"img/star-y.png",
+        inCart:false,
+        count:0,
+        total:0
+    },
+    {
+        id: 8,
+        title: "Tony buoi sang",
+        img:"img/ThieuNhi/i-8.jpg" ,
+        price:20,
+        company:"aas",
+        info:"kkk",
+        rating1:"img/star-x.png",
+        rating2:"img/star-x.png",
+        rating3:"img/star-x.png",
+        rating4:"img/star-y.png",
+        rating5:"img/star-y.png",
+        inCart:false,
+        count:0,
+        total:0
+    }
+
+]

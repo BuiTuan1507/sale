@@ -16,14 +16,16 @@ import Footer from './UI/Footer';
 import Hover from './Hover'
 import Thanhtoan from './Thanhtoan';
 import bank from './user/bank';
-
+import search from './searchSP'
 class App extends Component{
      
     render(){
         return(
             <React.Fragment>
                 <Navbar/>
+                <br/>
                 <Switch>
+                    <Route path = "/search" component={search}/>
                 <Route path = "/bank" component = {bank}/>
                 <Route  exact path = "/" component ={Hover}/>
                 <Route path = "/profile" component={Profile}/>
@@ -33,7 +35,7 @@ class App extends Component{
                 <Route path="/Cart" component={Cart}/> 
                 <Route path = "/Register" component ={Register}/>   
                 <Route path = "/Login" component = {Login}/> 
-                     <Route path = "/Thanhtoan" component={Thanhtoan}/>
+                <Route path = "/Thanhtoan" component={Thanhtoan}/>
                 </Switch>
                  <Modal/>
                 

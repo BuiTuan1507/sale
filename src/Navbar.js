@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { IconContext } from "react-icons";
 import CustomizedInputBase from './UI/SearchBox';
 import { FaHome } from 'react-icons/fa'
+
 export default class Navbar extends Component {
     render() {
         return (
@@ -20,7 +21,8 @@ export default class Navbar extends Component {
                                 <li style={{ fontSize: "2em", fontFamily: "Permanent Marker", color: "orange" }}>SachViet.com</li></Link>
                         </li>
                     </ul>
-                    <div style={{position:"absolute", right:"540px"}}>
+                    
+                    <div style={{position:"absolute", right:"600px"}}>
                     <CustomizedInputBase/>
                     </div>
                     

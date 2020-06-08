@@ -49,26 +49,26 @@ export default function CartTotal({ value }) {
                <div className="col-10  mt-2 ml-sm-5 ml-md-auto col-sx-0 text center">
                   <Link to="/">
                      <button className="btn btn-danger" type="button" onClick={() => clearCart()}>
-                        Clear cart
+                        Xóa đơn hàng
                   </button>
                   </Link>
                   <h5>
                      <span className="text-title">
-                        Subtotal:
+                        Tổng giá sản phẩm:
                   </span>
-                     <strong>$ {cartSubTotal}</strong>
+                     <strong> {cartSubTotal}đ</strong>
                   </h5>
                   <h5>
                      <span className="text-title">
-                        Subtotal:
+                        Thuế: 
                   </span>
-                     <strong>$ {cartTax}</strong>
+                     <strong>{cartTax}đ</strong>
                   </h5>
                   <h5>
                      <span className="text-title">
-                        Subtotal:
+                        Tổng tiền: 
                   </span>
-                     <strong>$ {cartTotal}</strong>
+                     <strong>{cartTotal}đ</strong>
                   </h5>
 
 

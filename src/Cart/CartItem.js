@@ -21,11 +21,11 @@ export default function CartItem({ item, value }) {
             <span className="d-lg-none">
                giá:
          </span>
-            <div style={{ position: "absolute", left: "199px" }}>{price} </div>
+            <div style={{ position: "absolute", left: "225px" }}>{price} </div>
 
 
          </div>
-         <div className="col-10 mx-auto col-lg-2"  style={{left:"180px"}}>
+         <div className="col-10 mx-auto col-lg-2"  style={{left:"199px"}}>
            
             <div className="d-flex"  >
                <div>

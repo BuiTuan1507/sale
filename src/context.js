@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { storeProducts, detailProduct, userProfile, vanhocProduct,kinangProduct,thieunhiProduct,dungcuProduct,banchayProduct } from "./data";
+import { storeProducts, detailProduct, userProfile, vanhocProduct,kinangProduct,thieunhiProduct,dungcuProduct,banchayProduct,searchSP } from "./data";
 const ProductContext = React.createContext();
 class ProductProvider extends Component {
     state = {
         products: [],
-        search:[],
+        ss:[],
         detailProduct: detailProduct,
         cart: [],
         modalOpen: false,
@@ -18,19 +18,20 @@ class ProductProvider extends Component {
     componentDidMount() {
         //this.setProducts();
         this.display();
+        this.searchSP();
     }
 
-    //setProducts=()=>{
-    //let tempProducts=[];
-    // storeProducts.forEach(item =>{
-    // const singleItem = {...item};
-    // tempProducts = [...tempProducts,singleItem];
+    searchSP=()=>{
+    let tempProducts=[];
+     searchSP.forEach(item =>{
+     const singleItem = {...item};
+     tempProducts = [...tempProducts,singleItem];
 
-    // });
-    // this.setState(()=>{
-    // return {products:tempProducts};
-    //  })
-    //  }
+     });
+     this.setState(()=>{
+     return {ss:tempProducts};
+      })
+      }
     display = (k,d) => {
         let tempProducts = [];
         if (k === 1) {
@@ -92,7 +93,9 @@ class ProductProvider extends Component {
                 return { products: tempProducts };
             })
         }
+      
     }
+   
     getItem = (id) => {
         const product = this.state.products.find(item => item.id === id)
         return product;
@@ -227,7 +230,8 @@ class ProductProvider extends Component {
                     increment: this.increment,
                     decrement: this.decrement,
                     removeItem: this.removeItem,
-                    clearCart: this.clearCart
+                    clearCart: this.clearCart,
+                    searchSP: this.searchSP
                    
                 }}
             >

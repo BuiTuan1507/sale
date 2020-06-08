@@ -50,7 +50,7 @@ export default function CustomizedInputBase() {
         name = "que"
         type="text"
       />
-      <Link to="/">
+      <Link to="/search">
         <IconButton type="submit" className={classes.iconButton} aria-label="search" onClick={ss()} >
           <SearchIcon />
         </IconButton>
