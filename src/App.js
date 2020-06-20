@@ -14,7 +14,7 @@ import Login from './user/Login';
 import Profile from './user/Profile';
 import Footer from './UI/Footer';
 import Hover from './Hover'
-import Thanhtoan from './Thanhtoan';
+import Thanhtoan from './Cart/Thanhtoan';
 import bank from './user/bank';
 import search from './searchSP'
 class App extends Component{

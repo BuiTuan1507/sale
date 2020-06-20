@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { ProductConsumer } from './context'
 import Iconsale from './UI/Iconsale'
+import FlashSale from './UI/Flashsale'
 export default class Hover extends Component {
    render() {
 
@@ -68,7 +69,7 @@ export default class Hover extends Component {
                      </div>
                      <br />
                      <Iconsale />
-
+                     <FlashSale/>
                   </div>
                )
             }}
