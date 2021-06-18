@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+tại sao immuitibulity lại quan trọng?
 
-## Available Scripts
+immutibility là gì ?
+Theo nguồn của Wikipedia
+Immutable object (object không thay đổi) ám chỉ các object không thể bị đổi state sau khi nó đã được tạo ra. 
+Điều hoàn toàn trái ngược so với mutable object (object có thể thay đổi) vốn cho phép ta được thoải mái thay state của nó. Trong một số trường hợp, object vẫn được cho là Immutable mặc dù một số thuộc tính bên trong đã thay đổi nhưng state của object vẫn không khác gì so với cũ.
 
-In the project directory, you can run:
+ví dụ :
+các biên bất biên như là được khai báo const c ++, js, final java..,hằng số
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Nếu một đối tượng được biết là Immutibulity, bạn nên tạo một tham chiếu của nó thay vì sao chép toàn bộ đối tượng. Điều này được thực hiện để tiết kiệm bộ nhớ bằng cách ngăn chặn sự trùng lặp dữ liệu và tránh các lệnh gọi đến các hàm tạo và hủy; nó cũng dẫn đến khả năng tăng tốc độ thực thi.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Trong JavaScript, tất cả các kiểu nguyên thủy (Undefined, Null, Boolean, Number, BigInt, String, Symbol) là bất biến, nhưng các đối tượng tùy chỉnh thường có thể thay đổi được.
 
-### `npm test`
+Để mô phỏng tính bất biến trong một đối tượng, người ta có thể định nghĩa các thuộc tính là chỉ đọc (có thể ghi: false).
+imutibility trong react js ?
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Lời khuyên đầu tiên và cũng là căn bản nhất, luôn dùng const khi khai báo. Chắc bạn cũng đã biết, let và const được giới thiệu từ phiên bản ES6, cho phép khai báo biến có tầm vực theo khối và không thực hiện hoisting. Điểm khác biệt giữa let và const là bạn có thể thay đổi giá trị của biến khai báo với let, trong khi không thể với const.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Cũng cần lưu ý là khi khai báo objects với const, mặc dù bạn không thể gán giá trị mới cho object nhưng giá trị của các thuộc tính vẫn có thể bị thay đổi.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Như vậy để thay đổi giá trị của object mà vẫn đảm bảo tính chất bất biến, chúng ta cần sử dụng Object.assign(target, ...sources). 
 
-### `npm run eject`
+map(), filter(), reduce(). Một đặc điểm của các hàm này là chúng luôn trả về mảng/giá trị mới chứ không thay đổi mảng ban đầu.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Hạn chế viết logic bên trong hàm render() mà thay vào đó nên đưa các bước thao tác dữ liệu thành từng phương thức riêng.
+tại sao nó lại quan trọng 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Việc phát hiện các thay đổi trong các đối tượng có thể thay đổi là rất khó vì chúng được sửa đổi trực tiếp. Việc phát hiện này yêu cầu đối tượng có thể thay đổi được so sánh với các bản sao trước đó của chính nó và toàn bộ cây đối tượng được duyệt qua.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Việc phát hiện các thay đổi trong các đối tượng không thay đổi dễ dàng hơn đáng kể. Nếu đối tượng bất biến đang được tham chiếu khác với đối tượng trước đó, thì đối tượng đó đã thay đổi.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Lợi ích chính của tính bất biến là nó giúp bạn xây dựng các thành phần thuần túy trong React. Dữ liệu bất biến có thể dễ dàng xác định xem các thay đổi đã được thực hiện hay chưa, giúp xác định khi nào một thành phần yêu cầu render lại
 
-## Learn More
+ứng dụng của phần này, lợi ích
+Trong React-Redux, rất nhiều components khác nhau làm việc với state chung của ứng dụng và các components đó hoạt động cùng lúc nên sử dụng Immutability với state là cách tốt nhất để theo dõi hoạt động của nó.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Tính bất biến có thể mang lại hiệu suất cao hơn cho ứng dụng của bạn và dẫn đến việc lập trình và gỡ lỗi đơn giản hơn, vì dữ liệu không bao giờ thay đổi dễ lý giải hơn dữ liệu được tự do thay đổi tùy ý trong ứng dụng của bạn.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Cả Redux và React-Redux đều sử dụng tính năng shallow equality checking. Cụ thể: - Tiện ích connectReducers của Redux shallowly checks các thay đổi tham chiếu gây ra bởi các bộ giảm mà nó gọi. - Phương thức kết nối của React-Redux tạo ra các thành phầnshallowly checks thay đổi tham chiếu đối với trạng thái gốc và các giá trị trả về từ hàm mapStateToProps để xem liệu các thành phần được bao bọc có thực sự cần kết xuất lại hay không. Việc shallowly checks như vậy đòi hỏi tính bất biến để hoạt động chính xác.
 
-### Analyzing the Bundle Size
+Kiểm tra bình đẳng nông (hoặc bình đẳng tham chiếu) chỉ đơn giản là kiểm tra xem hai biến khác nhau tham chiếu đến cùng một đối tượng; ngược lại, kiểm tra bình đẳng sâu (hoặc bình đẳng giá trị) phải kiểm tra mọi giá trị thuộc tính của hai đối tượng.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Redux uses shallow equality checking in its combineReducers function to return either a new mutated copy of the root state object, or, if no mutations have been made, the current root state object.
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+React-Redux sử dụng tính năng kiểm tra bình đẳng nông để xác định xem thành phần mà nó bao bọc có cần được hiển thị lại hay không.
 
-### Advanced Configuration
+Để làm điều này, nó giả định rằng thành phần được bao bọc là tinh khiết; nghĩa là thành phần sẽ tạo ra cùng một kết quả với cùng một đạo cụ và trạng thái.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Bằng cách giả sử thành phần được bao bọc là thuần túy, nó chỉ cần kiểm tra xem đối tượng trạng thái gốc hoặc các giá trị trả về từ mapStateToProps có thay đổi hay không. Nếu không, thành phần được bao bọc không cần kết xuất lại.
 
-### Deployment
+Nó phát hiện sự thay đổi bằng cách giữ một tham chiếu đến đối tượng trạng thái gốc và tham chiếu đến từng giá trị trong đối tượng đạo cụ được trả về từ hàm mapStateToProps.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Sau đó, nó chạy một kiểm tra bình đẳng nông trên tham chiếu của nó tới đối tượng trạng thái gốc và đối tượng trạng thái được chuyển tới nó, và một loạt kiểm tra nông riêng biệt trên mỗi tham chiếu đến giá trị của đối tượng đạo cụ và những giá trị được trả về khi chạy lại hàm mapStateToProps.
 
-### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Kiểm tra bình đẳng nông với một đối tượng có thể thay đổi sẽ không gây ra vấn đề với Redux, nhưng nó sẽ gây ra vấn đề với các thư viện phụ thuộc vào cửa hàng, chẳng hạn như React-Redux.
+
+Cụ thể, nếu lát cắt trạng thái được chuyển đến một bộ giảm thiểu bởi các bộ kết hợp là một đối tượng có thể thay đổi, bộ giảm tốc có thể sửa đổi nó trực tiếp và trả về nó.
+
+Nếu đúng như vậy, việc kiểm tra bình đẳng cạn mà connectReducers thực hiện sẽ luôn vượt qua, vì các giá trị của phần trạng thái được trả về bởi trình giảm thiểu có thể đã bị thay đổi, nhưng bản thân đối tượng thì không - nó vẫn là đối tượng giống như được chuyển cho trình giảm thiểu.
+
+Theo đó, connectReducers sẽ không đặt cờ hasChanged của nó, mặc dù trạng thái đã thay đổi. Nếu không có bộ giảm nào khác trả lại lát trạng thái mới, được cập nhật, cờ hasChanged sẽ vẫn được đặt thành false, khiến các bộ giảm kết hợp trả về đối tượng trạng thái gốc hiện có.
+
+Kho lưu trữ sẽ vẫn được cập nhật các giá trị mới cho trạng thái gốc, nhưng vì bản thân đối tượng trạng thái gốc vẫn là cùng một đối tượng, các thư viện liên kết với Redux, chẳng hạn như React-Redux, sẽ không nhận biết được trạng thái đột biến và vì vậy sẽ không kích hoạt kết xuất của một thành phần được bao bọc.
